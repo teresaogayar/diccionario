@@ -1,0 +1,18 @@
+<p></p>
+<div class="boton-menu">
+    <button routerLink="">Volver</button>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <a>📋</a>
+        <mat-menu #menu="matMenu" class="menu1">
+            <button mat-menu-item>
+                <mat-form-field appearance="fill">
+                      <mat-label>Añadir o ver</mat-label>
+                          <mat-select [(value)]="selected">
+                              <mat-option value="option1"routerLink="/ingles/formulario">Nueva palabra</mat-option>
+                              <mat-option value="option2"routerLink="/ingles/lista">Lista</mat-option>
+                      </mat-select>
+                </mat-form-field>
+              </button>
+          </mat-menu>
+    </button>
+</div>

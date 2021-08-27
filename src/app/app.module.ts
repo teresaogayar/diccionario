@@ -51,13 +51,20 @@ import {​​​​​​​​MatTreeModule}​​​​​​​​ from'@ang
 import {​​​​​​​​OverlayModule}​​​​​​​​ from'@angular/cdk/overlay';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NavegacionComponent } from './navegacion/navegacion.component';
+import { EspanolComponent } from './espanol/espanol.component';
+import { InglesComponent } from './ingles/ingles.component';
+import { FormularioEsComponent } from './formulario-es/formulario-es.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavegacionComponent,
+    EspanolComponent,
+    InglesComponent,
+    FormularioEsComponent
   ],
   imports: [
     BrowserModule,
@@ -111,6 +118,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OverlayModule,
 
     BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
