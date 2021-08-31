@@ -1,11 +1,83 @@
 p{
     margin-top: 70px;
     margin-left: 20px;
-  }
-  .boton-menu{
+}
+.cab{
+  display: flex;
+  flex-direction: column;
+}
+.boton-menu{
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  margin-left: 20px;
+  gap: 15px;
+}
+.palabra{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.formulario{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     flex-direction: row;
-    margin-left: 20px;
-  }
-  
+    align-items: center;
+    color: black;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px 0 rgb(185, 185, 185);
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: -50px;
+    gap:18px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+form a{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 10px;
+  color: crimson;
+}
+.palabra{
+  margin-top:12px;
+  margin-bottom:12px;
+}
+.palabra input{
+  background-color: white;
+}
+.description{
+  margin-top:12px;
+  margin-bottom:12px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px 0 rgb(185, 185, 185) 
+}
+.description input{
+  background-color: white;
+}
+mat-label{
+   color:grey
+}
+
+.errorpal{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  color: crimson;
+  font-size: 10px;
+  margin-left:12px;
+
+}
+.boxboton{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px; 
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0);
+}

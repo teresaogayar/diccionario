@@ -1,18 +1,44 @@
 <p></p>
 <div class="boton-menu">
-    <button routerLink="">Volver</button>
-    <button mat-button [matMenuTriggerFor]="menu">
-        <a>📋</a>
-        <mat-menu #menu="matMenu" class="menu1">
-            <button mat-menu-item>
-                <mat-form-field appearance="fill">
-                      <mat-label>Añadir o ver</mat-label>
-                          <mat-select [(value)]="selected">
-                              <mat-option value="option1"routerLink="/español/formulario">Nueva palabra</mat-option>
-                              <mat-option value="option2"routerLink="/español/lista">Lista</mat-option>
-                      </mat-select>
-                </mat-form-field>
-              </button>
-          </mat-menu>
-    </button>
+    <div class="act">
+        <div>
+            <button routerLink="" title="Atrás">Volver</button>
+        </div>
+        <div>
+            <button mat-button title="Nueva palabra" routerLink="/español/formulario">
+                <a>📋</a>
+                
+            </button>
+        </div>
+        <div class="palabra">
+            <h1>Diccionario ES</h1>
+        </div>
+        <div class="col-lg-2">
+            <div class="panel panel-default">
+            <div class="panel-body">
+                <input class="form-control" type="text" ng-model="search" placeholder="Buscar palabra"/>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dato-fila">
+    <!--Filas  -->
+    <div  *ngIf= "palabraes.length > 0 else nopalabras"> 
+
+        <div class="filas" *ngIf="router.url === '/espanol'" >
+            <div
+                class="flex-item"
+                *ngFor="let espanol of palabraes">
+                
+            <app-tarjeta-palabra (enviarBorrado)="MensajeBorrarPalabra($event)" [objetopalabra]="espanol"></app-tarjeta-palabra>
+            </div>
+        </div>
+    
+    </div> 
+
+    
+    <ng-template #nopalabras>
+        <div class="nopalabras"><b>⚠️ No hay palabras para mostrar</b></div>
+    </ng-template> 
 </div>

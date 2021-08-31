@@ -1,4 +1,55 @@
 <p></p>
-<div class="boton-menu">
-    <button routerLink="/espanol">Volver</button>
+<div class="cab">
+    <div class="boton-menu">
+        <div>
+            <button routerLink="/espanol" title="Atrás">Volver</button>
+        </div>
+    </div>
+    <div class="palabra">
+        <b><a>NUEVA PALABRA</a></b>
+    </div>
 </div>
+<p></p>
+<div class="formulario">
+    <form [formGroup]='registerForm'>
+        <a>Campos obligatorios (*)</a>
+        <div class="formu">
+            <div class="pal">
+                <mat-form-field class="palabra" apperance="fill">
+                    <mat-label for="palabra">Palabra </mat-label>
+                    <input matInput formControlName="palabra" required>
+                </mat-form-field>
+                <div class="errorpal">
+                    <span *ngIf='validacionCampos("palabra")'>
+                        <i>Introduce una palabra de 1 a 23 caracteres</i>
+                    </span>
+                </div>
+            </div>
+            <div class="desc">
+                <mat-form-field class="descripcion" appearance="fill">
+                    <mat-label for="despcricion">Descripción </mat-label>
+                    <input matInput formControlName="descripcion" required>
+                </mat-form-field>
+                <div class="errorpal">
+                    <span *ngIf='validacionCampos("descripcion")'>
+                        <i>Introduce una descripcion</i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    
+    <div class="boxboton">
+        <div class="boxcrear">
+            <div *ngIf="this.pulsado"> 
+                <button class="submit"  type="button" title="Crear palabra" (click)="guardar()">Enviar</button>
+            </div>
+        </div>
+        <div class="boxlimpiar">
+            <button class="limpia" type="button" title="Limpiar campos" (click)="limpiar()">Limpiar</button>
+        </div>
+    </div>
+</div>
+
+  

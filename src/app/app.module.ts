@@ -55,6 +55,9 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
 import { EspanolComponent } from './espanol/espanol.component';
 import { InglesComponent } from './ingles/ingles.component';
 import { FormularioEsComponent } from './formulario-es/formulario-es.component';
+import { TarjetaPalabraComponent } from './tarjeta-palabra/tarjeta-palabra.component';
+
+
 
 
 
@@ -64,7 +67,8 @@ import { FormularioEsComponent } from './formulario-es/formulario-es.component';
     NavegacionComponent,
     EspanolComponent,
     InglesComponent,
-    FormularioEsComponent
+    FormularioEsComponent,
+    TarjetaPalabraComponent
   ],
   imports: [
     BrowserModule,

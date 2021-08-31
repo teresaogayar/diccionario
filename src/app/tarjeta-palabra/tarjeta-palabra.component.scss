@@ -1,0 +1,38 @@
+.tarjeta{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+    box-shadow: 5px 0 5px 5px rgba(185, 185, 185, 0.452);
+    gap:10px;
+}
+.dato-tarjeta{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    margin-top: 3px;
+    gap: 15px;
+}
+.titulo{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    margin-left: 5px;
+    gap: 30px;
+}
+.detalles{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    margin-right: 5px;
+    gap: 30px;
+}
+.boxbotones{
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 12px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}

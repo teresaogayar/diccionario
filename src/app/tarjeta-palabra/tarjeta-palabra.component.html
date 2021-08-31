@@ -1,0 +1,30 @@
+
+<div class="tarjeta">
+    <div class="dato-tarjeta">
+        <div class="titulo">
+            <div class="palabra">
+                <b>{{objetopalabra.palabra}}</b>
+            </div>
+        </div>
+        <div class="detalles">
+            <div class="descripcion">
+                {{objetopalabra.descripcion}}
+            </div>
+            <div class="fecha-alta">
+                {{objetopalabra.fechaAlta}} 
+            </div>
+            <div class="fecha-modif">
+                {{objetopalabra.fechaModificacion}}
+            </div>
+            
+        </div>
+    </div>
+    <div class="boxbotones">
+        <button class="submit" color="warn" title="Editar palabra" [routerLink]="['/espanol', objetopalabra.palabra]">
+            Editar
+        </button>
+        <button class="borra" color="warn" title="Borrar palabra" (click)="borrarPalabra()">
+            Borrar
+        </button>
+    </div>
+</div>

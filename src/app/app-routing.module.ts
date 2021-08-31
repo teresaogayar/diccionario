@@ -13,6 +13,9 @@ const routes: Routes = [
   },
   {
     path:'español/formulario', component: FormularioEsComponent
+  },
+  {
+    path:'espanol/:palabra', component: FormularioEsComponent
   }
 ];
 
