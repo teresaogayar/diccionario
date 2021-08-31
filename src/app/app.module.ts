@@ -56,6 +56,9 @@ import { EspanolComponent } from './espanol/espanol.component';
 import { InglesComponent } from './ingles/ingles.component';
 import { FormularioEsComponent } from './formulario-es/formulario-es.component';
 import { TarjetaPalabraComponent } from './tarjeta-palabra/tarjeta-palabra.component';
+import { PagInicioComponent } from './pag-inicio/pag-inicio.component';
+import { FormularioEnComponent } from './formulario-en/formulario-en.component';
+import { TarjetaWordComponent } from './tarjeta-word/tarjeta-word.component';
 
 
 
@@ -68,7 +71,10 @@ import { TarjetaPalabraComponent } from './tarjeta-palabra/tarjeta-palabra.compo
     EspanolComponent,
     InglesComponent,
     FormularioEsComponent,
-    TarjetaPalabraComponent
+    TarjetaPalabraComponent,
+    PagInicioComponent,
+    FormularioEnComponent,
+    TarjetaWordComponent
   ],
   imports: [
     BrowserModule,

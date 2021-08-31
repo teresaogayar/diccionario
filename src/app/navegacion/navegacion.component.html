@@ -3,13 +3,13 @@
     <div class="menu">
         <nav>
             <a routerLink="">
-                <img width="40" alt="Diccionario Logo"
+                <img width="40" title="Página inicial" alt="Diccionario Logo" class="logo"
             src="https://image.winudf.com/v2/image1/Y29tLm1lbmEuZGljY2lvbmFyaW9lc3Bhbm9sbWlza2l0b19pY29uXzE1ODQ1Nzc2NzJfMDM0/icon.png?w=170&fakeurl=1"
             />
-            <span>Diccionario ES/EN</span>
+            <span title="Página inicial">Diccionario ES/EN</span>
             </a>
-            <a [routerLink]="['espanol']">ESPAÑOL</a>
-            <a routerLink="/ingles">INGLÉS</a>
+            <a title="Español" [routerLink]="['espanol']">ESPAÑOL</a>
+            <a title="Inglés" routerLink="/ingles">INGLÉS</a>
         </nav>
     </div>
     

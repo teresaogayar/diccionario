@@ -1,0 +1,31 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 90px;
+    margin-left: 230px;
+    margin-right: 230px;
+    box-shadow: 5px 0 5px 5px rgba(185, 185, 185, 0.452);
+}
+h2{
+    margin-left: 380px;
+}
+p{
+    margin: 20px;
+}
+.imagenes{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 15px;
+    gap:8px;
+}
+.img2{
+    width: 80px;
+    height: 80px;
+}
+.img1{
+    width: 80px;
+    height: 80px;
+}

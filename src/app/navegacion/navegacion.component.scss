@@ -24,6 +24,7 @@
     justify-content: left;
     flex-direction: row;
     align-items: left;
+    margin-top: 10px;
     list-style-type: none;
 }
 .menu nav a{
@@ -33,6 +34,9 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 12px;
+}
+.menu nav a img{
+  margin-top: -10px;
 }
 p{
   margin-top: 80px;

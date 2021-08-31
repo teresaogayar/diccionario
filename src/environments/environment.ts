@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8080/espanol/',
-  apiUrl2: 'http://localhost:8080/espanol'
+  apiUrl2: 'http://localhost:8080/espanol',
+  apiUrl1En: 'http://localhost:8080/ingles/',
+  apiUrl2En: 'http://localhost:8080/ingles'
 };
 
 /*

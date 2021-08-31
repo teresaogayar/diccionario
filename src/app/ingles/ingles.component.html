@@ -1,18 +1,42 @@
 <p></p>
 <div class="boton-menu">
-    <button routerLink="">Volver</button>
-    <button mat-button [matMenuTriggerFor]="menu">
-        <a>📋</a>
-        <mat-menu #menu="matMenu" class="menu1">
-            <button mat-menu-item>
-                <mat-form-field appearance="fill">
-                      <mat-label>Añadir o ver</mat-label>
-                          <mat-select [(value)]="selected">
-                              <mat-option value="option1"routerLink="/ingles/formulario">Nueva palabra</mat-option>
-                              <mat-option value="option2"routerLink="/ingles/lista">Lista</mat-option>
-                      </mat-select>
-                </mat-form-field>
-              </button>
-          </mat-menu>
-    </button>
+    <div class="act">
+        <div>
+            <button routerLink="" title="Atrás">Volver</button>
+        </div>
+        <div>
+            <button mat-button title="New word" routerLink="/ingles/formulario">
+                <a>📋</a>
+                
+            </button>
+        </div>
+        <div class="palabra">
+            <h1>Diccionario EN</h1>
+        </div>
+        <div class="col-lg-2">
+            <div class="panel panel-default">
+            <div class="panel-body">
+                <input class="form-control" type="text" ng-model="search" placeholder="Search word"/>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="dato-fila">
+        <!--Filas  -->
+        <div  *ngIf= "palabraen.length > 0 else nowords"> 
+    
+            <div class="filas" *ngIf="router.url === '/ingles'" >
+                <div
+                    class="flex-item"
+                    *ngFor="let ingles of palabraen">
+                    
+                <app-tarjeta-word (sendBorrado)="MensajeBorrarWord($event)" [objetoword]="ingles"></app-tarjeta-word>
+                </div>
+            </div>
+        
+        </div> 
+    
+    <ng-template #nowords>
+        <div class="nowords"><b>⚠️ There are no words to show</b></div>
+    </ng-template> 
 </div>
