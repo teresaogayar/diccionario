@@ -59,6 +59,7 @@ import { TarjetaPalabraComponent } from './tarjeta-palabra/tarjeta-palabra.compo
 import { PagInicioComponent } from './pag-inicio/pag-inicio.component';
 import { FormularioEnComponent } from './formulario-en/formulario-en.component';
 import { TarjetaWordComponent } from './tarjeta-word/tarjeta-word.component';
+import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 
 
 
@@ -74,7 +75,8 @@ import { TarjetaWordComponent } from './tarjeta-word/tarjeta-word.component';
     TarjetaPalabraComponent,
     PagInicioComponent,
     FormularioEnComponent,
-    TarjetaWordComponent
+    TarjetaWordComponent,
+    PiePaginaComponent
   ],
   imports: [
     BrowserModule,

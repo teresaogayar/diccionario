@@ -42,7 +42,7 @@ export class InglesService {
   }
 
   deleteWord(word: string): Observable<Ingles>{
-    return this.httpClient.delete<Ingles>(this.urlEn2)
+    return this.httpClient.delete<Ingles>(this.urlEn2 + '/' + word)
   }
 
 }

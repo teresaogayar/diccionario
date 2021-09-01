@@ -16,7 +16,7 @@
         <div class="formu">
             <div class="pal">
                 <mat-form-field class="palabra" apperance="fill">
-                    <mat-label for="palabra">Palabra </mat-label>
+                    <mat-label>Palabra </mat-label>
                     <input matInput formControlName="palabra" required>
                 </mat-form-field>
                 <div class="errorpal">
@@ -27,11 +27,11 @@
             </div>
             <div class="pal2">
                 <mat-form-field class="palabra" apperance="fill">
-                    <mat-label for="palabra">Palabra Español </mat-label>
-                    <input matInput formControlName="palabra" required>
+                    <mat-label>Palabra Español </mat-label>
+                    <input matInput formControlName="palabraEspanol" required>
                 </mat-form-field>
                 <div class="errorpal">
-                    <span *ngIf='validacionCampos("palabra")'>
+                    <span *ngIf='validacionCampos("palabraEspanol")'>
                         <i>Introduce una palabra de 1 a 23 caracteres</i>
                     </span>
                 </div>
@@ -51,5 +51,6 @@
         </div>
     </div>
 </div>
+<app-pie-pagina></app-pie-pagina>
 
   

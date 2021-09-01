@@ -28,14 +28,12 @@ export class FormularioEnComponent implements OnInit {
 
   registerForm1 = this.formBuilder.group({
     palabra:['',Validators.required],
-    palabaEspanol:['',[Validators.required, Validators.minLength(1), Validators.max(23)]]
+    palabraEspanol:['',[Validators.required, Validators.minLength(1), Validators.max(23)]]
   });
  
   validacionCampos(campo: string){
     return this.registerForm1.controls[campo].errors && this.registerForm1.controls[campo].touched
   }
-
-
 
   clean() {
     this.registerForm1.patchValue({
@@ -47,7 +45,7 @@ export class FormularioEnComponent implements OnInit {
   ngOnInit(): void {
     this.router.params.subscribe(
       params =>{
-        this.word = params['palabra']
+        this.word = params['word']
         console.log(this.word)
       }
     )
@@ -63,6 +61,7 @@ export class FormularioEnComponent implements OnInit {
 
   guardar1(){
     if(this.registerForm1.invalid){
+      console.log(this.registerForm1.value)
       alert("Rellena todos los campos")
     } else {
       if(!this.word){
