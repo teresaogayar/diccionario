@@ -3,7 +3,17 @@ export interface Espanol{
     palabra: string,
     descripcion: string,
     fechaAlta: Date,
-    fechaModificacion: Date
+    fechaModificacion: Date, 
+    palabrasIngles: Ingles[];
+}
+
+
+export interface Ingles{ 
+    id: number;
+    palabra: string; 
+    palabraEspanol: string;
+    fechaAlta: Date; 
+    fechaModificacion: Date; 
 }
 export function empezar(): Espanol{
     const es = {
@@ -11,7 +21,8 @@ export function empezar(): Espanol{
         palabra: null,
         descripcion: null,
         fechaAlta: null,
-        fechaModificacion: null
+        fechaModificacion: null,
+        palabrasIngles: null
     }
     return Object.assign(es);
 }

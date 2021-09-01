@@ -14,19 +14,19 @@ const routes: Routes = [
     path:'ingles', component: InglesComponent
   },
   {
-    path:'español/formulario', component: FormularioEsComponent
+    path:'espanol/formulario/:palabra', component: FormularioEsComponent
   },
   {
-    path:'espanol/:palabra', component: FormularioEsComponent
+    path:'espanol/formulario', component: FormularioEsComponent
   },
   {
     path:'', component: PagInicioComponent
   },
   {
-    path:'ingles/formulario', component: FormularioEnComponent
+    path:'ingles/formulario/:word', component: FormularioEnComponent
   },
   {
-    path:'ingles/:word', component: FormularioEnComponent
+    path:'ingles/formulario', component: FormularioEnComponent
   }
 ];
 

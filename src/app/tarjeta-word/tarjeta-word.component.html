@@ -1,15 +1,15 @@
 
 <div class="tarjeta">
     <div class="dato-tarjeta">
-        <div class="titulo">
+        <div class="detalles">
             <div class="palabra">
                 <b>{{objetoword.palabra}}</b>
             </div>
-        </div>
-        <div class="detalles">
             <div class="palabraEspanol">
                 {{objetoword.palabraEspanol}}
             </div>
+        </div>
+        <div class="fechas">
             <div class="fecha-alta">
                 {{objetoword.fechaAlta | date:'dd-MM-yyyy HH:mm'}} 
             </div>
@@ -20,11 +20,11 @@
         </div>
     </div>
     <div class="boxbotones">
-        <button class="submit" color="warn" title="Editar palabra" [routerLink]="['/ingles', objetoword.palabra]">
-            Editar
+        <button class="submit" color="warn" title="Update word" [routerLink]="['/ingles/formulario', objetoword.palabra]">
+            <mat-icon >find_replace</mat-icon>
         </button>
-        <button class="borra" color="warn" title="Borrar palabra" (click)="borrarWord()">
-            Borrar
+        <button class="borra" color="warn" title="Delete word" (click)="borrarWord()">
+            <mat-icon>delete</mat-icon>
         </button>
     </div>
 </div>

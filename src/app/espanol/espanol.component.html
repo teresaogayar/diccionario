@@ -2,26 +2,23 @@
 <div class="boton-menu">
     <div class="act">
         <div>
-            <button routerLink="" title="Atrás">Volver</button>
+            <button class="volver" routerLink="" title="Atrás">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
         </div>
         <div>
-            <button mat-button title="Nueva palabra" routerLink="/español/formulario">
-                <a>📋</a>
-                
+            <button mat-button title="New word" routerLink="/espanol/formulario">
+                <mat-icon>library_add</mat-icon>
             </button>
         </div>
         <div class="palabra">
             <h1>Diccionario ES</h1>
         </div>
         <div class="col-lg-2">
-            <div class="panel panel-default">
-            <div class="panel-body">
-                <input matInput (keyup)="filtro($event)" placeholder="Buscar palabra">
-            </div>
-            </div>
+            <mat-label >Búsqueda </mat-label>
+            <input matInput (keyup)="filtro($event)" placeholder="Buscar palabra">
         </div>
     </div>
-    
     <div class="dato-fila">
     <!--Filas  -->
     <div  *ngIf= "palabraes.length > 0 else nopalabras"> 

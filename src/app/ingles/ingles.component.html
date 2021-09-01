@@ -2,23 +2,21 @@
 <div class="boton-menu">
     <div class="act">
         <div>
-            <button routerLink="" title="Atrás">Volver</button>
+            <button class="volver" routerLink="" title="Atrás">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
         </div>
         <div>
             <button mat-button title="New word" routerLink="/ingles/formulario">
-                <a>📋</a>
-                
+                <mat-icon>library_add</mat-icon>
             </button>
         </div>
         <div class="palabra">
-            <h1>Diccionario EN</h1>
+            <h1>Dictionary EN</h1>
         </div>
         <div class="col-lg-2">
-            <div class="panel panel-default">
-            <div class="panel-body">
-                <input matInput (keyup)="filtroWord($event)" placeholder="Search word">
-            </div>
-            </div>
+            <mat-label >Search </mat-label>
+            <input matInput (keyup)="filtroWord($event)" placeholder="Search word">
         </div>
     </div>
     <div class="dato-fila">

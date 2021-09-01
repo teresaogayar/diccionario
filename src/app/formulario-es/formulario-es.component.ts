@@ -78,6 +78,7 @@ export class FormularioEsComponent implements OnInit {
     }
     
   }
+  
 
   añadirPalabra():void{
     console.log(this.registerForm.value);

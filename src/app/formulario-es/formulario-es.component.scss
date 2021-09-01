@@ -13,6 +13,18 @@ p{
   margin-left: 20px;
   gap: 15px;
 }
+
+.volver{
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  border: none;
+  background-color:rgba(0, 0, 128, 0);
+  color:rgba(58, 69, 119, 0.705);
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
 .palabra{
   display: flex;
   justify-content: center;
@@ -26,8 +38,8 @@ p{
     color: black;
     border-radius: 4px;
     box-shadow: 0 5px 5px 0 rgb(185, 185, 185);
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 590px;
+    margin-right: 590px;
     margin-top: -50px;
     gap:18px;
 }
@@ -76,10 +88,33 @@ mat-label{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 8px;
+  gap: 90px;
   margin-bottom: 8px; 
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.submit{
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  border: none;
+  background-color:rgba(0, 0, 128, 0);
+  color: rgba(18, 158, 18, 0.719);
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+.limpia{
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  border: none;
+  background-color:rgba(0, 0, 128, 0);
+  color: rgba(236, 205, 27, 0.829);
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
 }
 app-pie-pagina{
   display: flex;

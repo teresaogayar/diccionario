@@ -12,6 +12,9 @@ import { EspanolService } from '../espanol.service';
 export class TarjetaPalabraComponent implements OnInit {
   @Input() objetopalabra: Espanol = empezar();
   @Output() enviarBorrado: EventEmitter<any> = new EventEmitter<any>();
+
+  dataSource: Espanol[] = [];
+  palabras: Espanol[] = [];
   
   constructor(
     private espanolService: EspanolService, 
@@ -21,8 +24,13 @@ export class TarjetaPalabraComponent implements OnInit {
  
  
    ngOnInit(): void {
-   }
- 
+    console.log("Palabras")
+    this.espanolService.getPalabras().subscribe(p => {
+      console.log(p)
+      this.dataSource = p;
+       this.palabras = p; 
+    })
+  }
    
  
    borrarPalabra(){

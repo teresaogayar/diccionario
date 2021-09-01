@@ -1,30 +1,34 @@
 
 <div class="tarjeta">
     <div class="dato-tarjeta">
-        <div class="titulo">
+        <div class="detalles">
             <div class="palabra">
                 <b>{{objetopalabra.palabra}}</b>
             </div>
-        </div>
-        <div class="detalles">
             <div class="descripcion">
                 {{objetopalabra.descripcion}}
             </div>
-            <div class="fecha-alta">
-                {{objetopalabra.fechaAlta | date:'dd-MM-yyyy HH:mm'}} 
+            
+            <div class="fechas">
+                <div class="fecha-alta">
+                    {{objetopalabra.fechaAlta | date:'dd-MM-yyyy HH:mm'}} 
+                </div>
+                <div class="fecha-modif">
+                    {{objetopalabra.fechaModificacion | date:'dd-MM-yyyy HH:mm'}}
+                </div>
             </div>
-            <div class="fecha-modif">
-                {{objetopalabra.fechaModificacion | date:'dd-MM-yyyy HH:mm'}}
+            <div class="array">
+                <div class="example-element-description" *ngFor="let p of objetopalabra.palabrasIngles">{{p.palabra}}</div>
             </div>
             
         </div>
     </div>
     <div class="boxbotones">
-        <button class="submit" color="warn" title="Editar palabra" [routerLink]="['/espanol', objetopalabra.palabra]">
-            Editar
+        <button class="submit" color="warn" title="Editar palabra" [routerLink]="['/espanol/formulario', objetopalabra.palabra]">
+            <mat-icon >find_replace</mat-icon>
         </button>
         <button class="borra" color="warn" title="Borrar palabra" (click)="borrarPalabra()">
-            Borrar
+            <mat-icon>delete</mat-icon>
         </button>
     </div>
 </div>

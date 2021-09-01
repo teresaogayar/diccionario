@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Espanol } from '../espanol';
 import { EspanolService } from '../espanol.service';
@@ -15,12 +16,14 @@ export class EspanolComponent implements OnInit {
 
   public palabraes: Espanol[] = [];
   valor = '';
+ 
   
   constructor(public espanolService: EspanolService,
-              public router: Router) { }
+              public router: Router,
+              public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    
+
     this.espanolService.getPalabras().subscribe((resp: Espanol[])=>{
       console.log(resp);
       this.palabraes = resp;

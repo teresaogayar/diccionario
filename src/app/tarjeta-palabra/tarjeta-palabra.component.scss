@@ -4,9 +4,11 @@
     flex-direction: column;
     gap: 15px;
     margin-top: 10px;
+    border: 1px solid black;
     border-radius: 4px;
     box-shadow: 5px 0 5px 5px rgba(185, 185, 185, 0.452);
     gap:10px;
+    background-color: none;
 }
 .dato-tarjeta{
     display: flex;
@@ -15,19 +17,23 @@
     margin-top: 3px;
     gap: 15px;
 }
-.titulo{
-    display: flex;
-    justify-content: right;
-    flex-direction: row;
-    margin-left: 5px;
-    gap: 30px;
-}
 .detalles{
     display: flex;
     justify-content: right;
     flex-direction: row;
+    margin-left: 8px;
     margin-right: 5px;
     gap: 30px;
+}
+.fechas{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    margin-right: 5px;
+    gap: 30px;
+}
+.array{
+    margin-right: 5px;
 }
 .boxbotones{
     display: flex;
@@ -35,4 +41,26 @@
     margin-right: 12px;
     margin-left: 5px;
     margin-bottom: 10px;
+}
+button{
+    border: none;
+    background-color: white;
+
+}
+.submit {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    color: rgba(58, 119, 58, 0.705);
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+}
+.borra {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    color: rgba(220, 20, 60, 0.781);
+    height: 24px;
+    width: 24px;
 }
