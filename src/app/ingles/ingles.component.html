@@ -16,7 +16,7 @@
         <div class="col-lg-2">
             <div class="panel panel-default">
             <div class="panel-body">
-                <input class="form-control" type="text" ng-model="search" placeholder="Search word"/>
+                <input matInput (keyup)="filtroWord($event)" placeholder="Search word">
             </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="filas" *ngIf="router.url === '/ingles'" >
                 <div
                     class="flex-item"
-                    *ngFor="let ingles of palabraen">
+                    *ngFor="let ingles of palabraen | search: valor">
                     
                 <app-tarjeta-word (sendBorrado)="MensajeBorrarWord($event)" [objetoword]="ingles"></app-tarjeta-word>
                 </div>

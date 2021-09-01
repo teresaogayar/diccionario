@@ -16,7 +16,7 @@
         <div class="col-lg-2">
             <div class="panel panel-default">
             <div class="panel-body">
-                <input class="form-control" type="text" ng-model="search" placeholder="Buscar palabra"/>
+                <input matInput (keyup)="filtro($event)" placeholder="Buscar palabra">
             </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
         <div class="filas" *ngIf="router.url === '/espanol'" >
             <div
                 class="flex-item"
-                *ngFor="let espanol of palabraes">
+                *ngFor="let espanol of palabraes | search: valor">
                 
             <app-tarjeta-palabra (enviarBorrado)="MensajeBorrarPalabra($event)" [objetopalabra]="espanol"></app-tarjeta-palabra>
             </div>

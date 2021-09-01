@@ -60,6 +60,7 @@ import { PagInicioComponent } from './pag-inicio/pag-inicio.component';
 import { FormularioEnComponent } from './formulario-en/formulario-en.component';
 import { TarjetaWordComponent } from './tarjeta-word/tarjeta-word.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
+import { SearchPipe } from './search.pipe';
 
 
 
@@ -76,7 +77,8 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
     PagInicioComponent,
     FormularioEnComponent,
     TarjetaWordComponent,
-    PiePaginaComponent
+    PiePaginaComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

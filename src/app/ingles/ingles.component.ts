@@ -11,6 +11,7 @@ import { InglesService } from '../ingles.service';
 export class InglesComponent implements OnInit {
 
   public palabraen: Ingles[] = [];
+  valor = '';
 
   constructor(public inglesService: InglesService,
               public router: Router) { }
@@ -26,5 +27,9 @@ export class InglesComponent implements OnInit {
   MensajeBorrarWord(word: string){
     this.palabraen = this.palabraen.filter(pal => pal.palabra!=word);
   }
+
+  filtroWord(event: Event) {
+    this.valor = (event.target as HTMLInputElement).value;
+  } 
 
 }

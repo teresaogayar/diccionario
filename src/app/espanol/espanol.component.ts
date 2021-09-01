@@ -14,6 +14,7 @@ import { EspanolService } from '../espanol.service';
 export class EspanolComponent implements OnInit {
 
   public palabraes: Espanol[] = [];
+  valor = '';
   
   constructor(public espanolService: EspanolService,
               public router: Router) { }
@@ -29,5 +30,9 @@ export class EspanolComponent implements OnInit {
   MensajeBorrarPalabra(palabra: string){
     this.palabraes = this.palabraes.filter(pal => pal.palabra!=palabra);
   }
+  
+  filtro(event: Event) {
+    this.valor = (event.target as HTMLInputElement).value;
+  } 
 
 }
