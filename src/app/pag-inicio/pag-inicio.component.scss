@@ -1,4 +1,3 @@
-
 .container{
     display: flex;
     justify-content: center;
@@ -8,8 +7,14 @@
     margin-right: 230px;
     box-shadow: 5px 0 5px 5px rgba(185, 185, 185, 0.452);
 }
+.Bienvenida{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 h2{
-    margin-left: 380px;
+    display: flex;
+    justify-content: center;
 }
 p{
     margin: 20px;
