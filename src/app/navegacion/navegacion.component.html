@@ -21,6 +21,7 @@
     </div>
 </ng-container>
 
+<!-- Navegación si ha iniciado sesión -->
 <ng-template #login>
     <div class="toolbar" role="banner">
         <div class="menu">
@@ -37,7 +38,10 @@
                 </div>
                 
                 <div class="cerrar">
-                    <a  title="Cerrar sesión" (click)="cerrar()"><mat-icon> person_pin_circle</mat-icon></a>
+                    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon> person_pin_circle</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item title="Cerrar sesión" (click)="cerrar()">Cerrar sesion</button>
+                    </mat-menu>
                 </div>
             </nav>
         </div>

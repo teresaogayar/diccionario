@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../login.service';
 import { LogService } from '../login/login.component';
 
 @Component({
@@ -27,5 +26,7 @@ export class NavegacionComponent implements OnInit {
       this.route.navigate(["/login"])
     }
   }
+
+  
 
 }

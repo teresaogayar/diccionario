@@ -12,7 +12,7 @@
         <form [formGroup]="registerForm">
             <p>
                 <mat-form-field>
-                    <input type="text" matInput placeholder="Username" formControlName="username">
+                    <input type="text" matInput placeholder="Email" formControlName="email">
                 </mat-form-field>
             </p>
             <p>
@@ -20,7 +20,7 @@
                     <input type="password" matInput placeholder="Password" formControlName="password">
                 </mat-form-field>
             </p>
-            <button title="Conectar" type="submit" mat-raiser-button color="primary" (click)="login()" [disabled]="registerForm.invalid">Login</button>
+            <button title="Conectar" type="submit" mat-raiser-button color="primary" (click)="login()">Login</button>
         </form>
     </mat-card-content>
 </mat-card>
