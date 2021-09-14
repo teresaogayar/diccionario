@@ -2,6 +2,26 @@ p{
     margin-top: 70px;
     margin-left: 20px;
 }
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+mat-card{
+  background-color: white;
+}
+.mat-form-field{
+  width: 100%;
+  min-width: 300px;
+}
+mat-card-title{
+  display: flex;
+  justify-content: center;
+}
+mat-card-content{
+  display: flex;
+  justify-content: center;
+}
 .cab{
   display: flex;
   flex-direction: column;
@@ -57,6 +77,7 @@ form a{
 .palabra{
   margin-top:12px;
   margin-bottom:12px;
+  color: black;
 }
 .palabra input{
   background-color: white;

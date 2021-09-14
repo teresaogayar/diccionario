@@ -7,56 +7,63 @@
             </button>
         </div>
     </div>
-    <div class="palabra">
-        <h3>NEW WORD</h3>
-    </div>
+    
 </div>
 <p></p>
-<div class="formulario">
-    <form [formGroup]='registerForm1'>
-        <a>Required fields(*)</a>
-        <div class="formu">
-            <div class="pal">
-                <mat-form-field class="palabra" apperance="fill">
-                    <mat-label>Word </mat-label>
-                    <input matInput formControlName="palabra" required>
-                </mat-form-field>
-                <div class="errorpal">
-                    <span *ngIf='validacionCampos("palabra")'>
-                        <i>Enter a word </i>
-                    </span>
+<mat-card>
+    <mat-card-title>
+        <div class="palabra">
+            <h3>NEW WORD</h3>
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <div class="formulario">
+            <form [formGroup]='registerForm1'>
+                <a>Required fields(*)</a>
+                <div class="formu">
+                    <div class="pal">
+                        <mat-form-field class="palabra" apperance="fill">
+                            <mat-label>Word </mat-label>
+                            <input matInput formControlName="palabra" required>
+                        </mat-form-field>
+                        <div class="errorpal">
+                            <span *ngIf='validacionCampos("palabra")'>
+                                <i>Enter a word </i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pal2">
+                        <mat-form-field class="palabra" apperance="fill">
+                            <mat-label>Spanish Word </mat-label>
+                            <input matInput formControlName="palabraEspanol" required>
+                        </mat-form-field>
+                        <div class="errorpal">
+                            <span *ngIf='validacionCampos("palabraEspanol")'>
+                                <i>Enter a word from 1 to 23 characters</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            
+            <div class="boxboton">
+                <div class="boxlimpiar">
+                    <button class="limpia" type="button" title="Clean" (click)="clean()">
+                        <mat-icon>clear</mat-icon>
+                    </button>
+                </div>
+                <div class="boxcrear">
+                    <div *ngIf="this.pulsado1"> 
+                        <button class="submit"  type="button" title="Save" (click)="guardar1()">
+                            <mat-icon>send</mat-icon>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="pal2">
-                <mat-form-field class="palabra" apperance="fill">
-                    <mat-label>Spanish Word </mat-label>
-                    <input matInput formControlName="palabraEspanol" required>
-                </mat-form-field>
-                <div class="errorpal">
-                    <span *ngIf='validacionCampos("palabraEspanol")'>
-                        <i>Enter a word from 1 to 23 characters</i>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </form>
-    
-    
-    <div class="boxboton">
-        <div class="boxlimpiar">
-            <button class="limpia" type="button" title="Clean" (click)="clean()">
-                <mat-icon>clear</mat-icon>
-            </button>
-        </div>
-        <div class="boxcrear">
-            <div *ngIf="this.pulsado1"> 
-                <button class="submit"  type="button" title="Save" (click)="guardar1()">
-                    <mat-icon>send</mat-icon>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+        </div>   
+    </mat-card-content>
+</mat-card>
 <app-pie-pagina></app-pie-pagina>
 
   

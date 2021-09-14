@@ -7,55 +7,63 @@
             </button>
         </div>
     </div>
-    <div class="palabra">
-        <h3>NUEVA PALABRA</h3>
-    </div>
+    
 </div>
 <p></p>
-<div class="formulario">
-    <form [formGroup]='registerForm'>
-        <a>Campos obligatorios (*)</a>
-        <div class="formu">
-            <div class="pal">
-                <mat-form-field class="palabra" apperance="fill">
-                    <mat-label for="palabra">Palabra </mat-label>
-                    <input matInput formControlName="palabra" required>
-                </mat-form-field>
-                <div class="errorpal">
-                    <span *ngIf='validacionCampos("palabra")'>
-                        <i>Introduce una palabra de 1 a 23 caracteres</i>
-                    </span>
+<mat-card>
+    <mat-card-title>
+        <div class="palabra">
+            <h3>NUEVA PALABRA</h3>
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <div class="formulario">
+            <form [formGroup]='registerForm'>
+                <a>Campos obligatorios (*)</a>
+                <div class="formu">
+                    <div class="pal">
+                        <mat-form-field class="palabra" apperance="fill">
+                            <mat-label for="palabra">Palabra </mat-label>
+                            <input matInput formControlName="palabra" required>
+                        </mat-form-field>
+                        <div class="errorpal">
+                            <span *ngIf='validacionCampos("palabra")'>
+                                <i>Introduce una palabra de 1 a 23 caracteres</i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <mat-form-field class="descripcion" appearance="fill">
+                            <mat-label for="despcricion">Descripción </mat-label>
+                            <input matInput formControlName="descripcion" required>
+                        </mat-form-field>
+                        <div class="errorpal">
+                            <span *ngIf='validacionCampos("descripcion")'>
+                                <i>Introduce una descripcion</i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+            
+            <div class="boxboton">
+                <div class="boxlimpiar">
+                    <button class="limpia" type="button" title="Limpiar campos" (click)="limpiar()">
+                        <mat-icon>clear</mat-icon>
+                    </button>
+                </div>
+                <div class="boxcrear">
+                    <div *ngIf="this.pulsado"> 
+                        <button class="submit"  type="button" title="Crear palabra" (click)="guardar()">
+                            <mat-icon>send</mat-icon>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="desc">
-                <mat-form-field class="descripcion" appearance="fill">
-                    <mat-label for="despcricion">Descripción </mat-label>
-                    <input matInput formControlName="descripcion" required>
-                </mat-form-field>
-                <div class="errorpal">
-                    <span *ngIf='validacionCampos("descripcion")'>
-                        <i>Introduce una descripcion</i>
-                    </span>
-                </div>
-            </div>
         </div>
-    </form>
-    
-    
-    <div class="boxboton">
-        <div class="boxlimpiar">
-            <button class="limpia" type="button" title="Limpiar campos" (click)="limpiar()">
-                <mat-icon>clear</mat-icon>
-            </button>
-        </div>
-        <div class="boxcrear">
-            <div *ngIf="this.pulsado"> 
-                <button class="submit"  type="button" title="Crear palabra" (click)="guardar()">
-                    <mat-icon>send</mat-icon>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+    </mat-card-content>
+</mat-card>
+        
 <app-pie-pagina></app-pie-pagina>
   

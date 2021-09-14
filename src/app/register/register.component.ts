@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
 
       RegisterComponent.users.push(Usuario);
       alert("Usuario creado");
+      this.route.navigate(['/login']);
       
     }
   }

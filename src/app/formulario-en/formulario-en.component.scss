@@ -1,121 +1,144 @@
 p{
-    margin-top: 70px;
-    margin-left: 20px;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+:host {
+display: flex;
+justify-content: center;
+margin: 100px 0;
+}
+mat-card{
+background-color: white;
+}
+.mat-form-field{
+width: 100%;
+min-width: 300px;
+}
+mat-card-title{
+display: flex;
+justify-content: center;
+}
+mat-card-content{
+display: flex;
+justify-content: center;
 }
 .cab{
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 .boton-menu{
-  display: flex;
-  justify-content: right;
-  flex-direction: row;
-  margin-left: 20px;
-  gap: 15px;
+display: flex;
+justify-content: right;
+flex-direction: row;
+margin-left: 20px;
+gap: 15px;
 }
+
 .volver{
-  background-repeat: no-repeat;
-  display: inline-block;
-  fill: currentColor;
-  border: none;
-  background-color:rgba(0, 0, 128, 0);
-  color:rgba(58, 69, 119, 0.705);
-  height: 24px;
-  width: 24px;
-  margin-right: 10px;
+background-repeat: no-repeat;
+display: inline-block;
+fill: currentColor;
+border: none;
+background-color:rgba(0, 0, 128, 0);
+color:rgba(58, 69, 119, 0.705);
+height: 24px;
+width: 24px;
+margin-right: 10px;
 }
 .palabra{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+display: flex;
+justify-content: center;
+gap: 15px;
 }
 .formulario{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    color: black;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px 0 rgb(185, 185, 185);
-    margin-left: 590px;
-    margin-right: 590px;
-    margin-top: -50px;
-    gap:18px;
-}
-form{
-  display: flex;
-  flex-direction: column;
-}
-form a{
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  font-size: 10px;
-  color: crimson;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px 0 rgb(185, 185, 185);
+  margin-left: 590px;
+  margin-right: 590px;
+  margin-top: -50px;
+  gap:18px;
+}
+form{
+display: flex;
+flex-direction: column;
+}
+form a{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+font-size: 10px;
+color: crimson;
 }
 .palabra{
-  margin-top:12px;
-  margin-bottom:12px;
+margin-top:12px;
+margin-bottom:12px;
+color: black;
 }
 .palabra input{
-  background-color: white;
+background-color: white;
 }
 .description{
-  margin-top:12px;
-  margin-bottom:12px;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 5px 5px 0 rgb(185, 185, 185) 
+margin-top:12px;
+margin-bottom:12px;
+background-color: white;
+border-radius: 4px;
+box-shadow: 0 5px 5px 0 rgb(185, 185, 185) 
 }
 .description input{
-  background-color: white;
+background-color: white;
 }
 mat-label{
-   color:grey
+ color:grey
 }
 
 .errorpal{
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-  color: crimson;
-  font-size: 10px;
-  margin-left:12px;
+display: flex;
+justify-content: left;
+flex-direction: row;
+color: crimson;
+font-size: 10px;
+margin-left:12px;
 
 }
 .boxboton{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 90px;
-  margin-bottom: 8px; 
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0);
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+gap: 90px;
+margin-bottom: 8px; 
+font-weight: bold;
+background-color: rgba(255, 255, 255, 0);
 }
+
 .submit{
-  background-repeat: no-repeat;
-  display: inline-block;
-  fill: currentColor;
-  border: none;
-  background-color:rgba(0, 0, 128, 0);
-  color: rgba(18, 158, 18, 0.719);
-  height: 24px;
-  width: 24px;
-  margin-right: 10px;
+background-repeat: no-repeat;
+display: inline-block;
+fill: currentColor;
+border: none;
+background-color:rgba(0, 0, 128, 0);
+color: rgba(18, 158, 18, 0.719);
+height: 24px;
+width: 24px;
+margin-right: 10px;
 }
 .limpia{
-  background-repeat: no-repeat;
-  display: inline-block;
-  fill: currentColor;
-  border: none;
-  background-color:rgba(0, 0, 128, 0);
-  color: rgba(236, 205, 27, 0.829);
-  height: 24px;
-  width: 24px;
-  margin-right: 10px;
+background-repeat: no-repeat;
+display: inline-block;
+fill: currentColor;
+border: none;
+background-color:rgba(0, 0, 128, 0);
+color: rgba(236, 205, 27, 0.829);
+height: 24px;
+width: 24px;
+margin-right: 10px;
 }
 app-pie-pagina{
-  display: flex;
-  justify-content: center;
-  padding-top: 600px;
+display: flex;
+justify-content: center;
+padding-top: 600px;
 }
