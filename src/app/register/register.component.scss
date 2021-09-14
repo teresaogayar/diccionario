@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+.volver{
+    color: white;
+}
+mat-card{
+    background-color:  #176bbeda;
+}
+.mat-form-field{
+    width: 100%;
+    min-width: 300px;
+}
+mat-card-title{
+    font-size: 18px;
+}
+mat-card-title, mat-card-content{
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 100%;
+}

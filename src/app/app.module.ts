@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+
 import {​​​​​​​​A11yModule}​​​​​​​​ from'@angular/cdk/a11y';
 import {​​​​​​​​ClipboardModule}​​​​​​​​ from'@angular/cdk/clipboard';
 import {​​​​​​​​DragDropModule}​​​​​​​​ from'@angular/cdk/drag-drop';
@@ -61,6 +62,8 @@ import { FormularioEnComponent } from './formulario-en/formulario-en.component';
 import { TarjetaWordComponent } from './tarjeta-word/tarjeta-word.component';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { SearchPipe } from './search.pipe';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -78,7 +81,9 @@ import { SearchPipe } from './search.pipe';
     FormularioEnComponent,
     TarjetaWordComponent,
     PiePaginaComponent,
-    SearchPipe
+    SearchPipe,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

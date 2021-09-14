@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>
+        Iniciar sesión
+        <button class="register" type="submit" mat-raiser-button color="primary" title="Nuevo usuario" routerLink="/register">
+            <mat-icon>person_add</mat-icon>
+            <br>
+            <a>Registrar</a>
+        </button>
+    </mat-card-title>
+    <a class="volver" title="volver" routerLink="/"><mat-icon>arrow_back</mat-icon></a>
+    <mat-card-content>
+        <form [formGroup]="registerForm">
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Username" formControlName="username">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </p>
+            <button title="Conectar" type="submit" mat-raiser-button color="primary" (click)="login()" [disabled]="registerForm.invalid">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card>

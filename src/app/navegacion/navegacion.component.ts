@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
+import { LogService } from '../login/login.component';
 
 @Component({
   selector: 'app-navegacion',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegacionComponent implements OnInit {
   selected = '';
-  constructor() { }
+  registrado = false;
+  constructor(private logService: LogService,
+              private route: Router) { }
 
   ngOnInit(): void {
+    this.logService.muestra.subscribe( e =>{
+      console.log(e);
+      this.registrado = e;
+    })
+  }
+
+  cerrar(){
+    if(this.logService.registrado){
+      this.registrado = false;
+      this.route.navigate(["/login"])
+    }
   }
 
 }
