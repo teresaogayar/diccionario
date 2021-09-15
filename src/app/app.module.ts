@@ -64,6 +64,7 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 import { SearchPipe } from './search.pipe';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
@@ -83,7 +84,8 @@ import { RegisterComponent } from './register/register.component';
     PiePaginaComponent,
     SearchPipe,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

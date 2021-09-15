@@ -8,13 +8,15 @@ import { InglesComponent } from './ingles/ingles.component';
 import { LoginComponent } from './login/login.component';
 import { PagInicioComponent } from './pag-inicio/pag-inicio.component';
 import { RegisterComponent } from './register/register.component';
+import { EspanolResolver } from './resolvers/espanol.resolver';
+import { InglesResolver } from './resolvers/ingles.resolver';
 
 const routes: Routes = [
   {
-    path:'espanol', component: EspanolComponent, canActivate:[AuthGuard]
+    path:'espanol', component: EspanolComponent, resolve:{ espanol: EspanolResolver}, canActivate:[AuthGuard]
   },
   {
-    path:'ingles', component: InglesComponent, canActivate:[AuthGuard]
+    path:'ingles', component: InglesComponent, resolve:{ ingles: InglesResolver}, canActivate:[AuthGuard]
   },
   {
     path:'espanol/formulario/:palabra', component: FormularioEsComponent, canActivate:[AuthGuard]

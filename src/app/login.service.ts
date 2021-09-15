@@ -13,7 +13,7 @@ export class LoginService {
   registrado = false;
   
   constructor(private router:Router,
-    private httpClient: HttpClient) { 
+              private httpClient: HttpClient) { 
 
   }
   private url : string = environment.apiUrlJSON;

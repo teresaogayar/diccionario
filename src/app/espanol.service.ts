@@ -17,7 +17,7 @@ export class EspanolService {
         'Content-Type': 'application/json',
         'Autorization': 'Bearer'
     }
-}
+  }
 
 
   private url1: string = environment.apiUrl;
