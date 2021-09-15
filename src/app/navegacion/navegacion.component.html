@@ -8,12 +8,17 @@
                         <img width="40" height="50" title="Página inicial" alt="Diccionario Logo" class="logo"
                     src="https://image.winudf.com/v2/image1/Y29tLm1lbmEuZGljY2lvbmFyaW9lc3Bhbm9sbWlza2l0b19pY29uXzE1ODQ1Nzc2NzJfMDM0/icon.png?w=170&fakeurl=1"
                     />
-                    <span title="Página inicial">Diccionario ES/EN</span>
                     </a>
+                    <h2 title="Página inicial"routerLink="/">Diccionario ES/EN</h2>
+                    
                 </div>
                 
                 <div class="login">
-                    <a title="Login" routerLink="/login"><mat-icon>account_circle</mat-icon></a>
+                    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon>account_circle</mat-icon></button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Inicar sesión" routerLink="/login">Iniciar sesión</button>
+                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Registrar" routerLink="/register">Registrar</button>
+                    </mat-menu>
                 </div>
             </nav>
         </div>
@@ -31,15 +36,16 @@
                         <img width="40" height="50" title="Página inicial" alt="Diccionario Logo" class="logo"
                     src="https://image.winudf.com/v2/image1/Y29tLm1lbmEuZGljY2lvbmFyaW9lc3Bhbm9sbWlza2l0b19pY29uXzE1ODQ1Nzc2NzJfMDM0/icon.png?w=170&fakeurl=1"
                     />
-                    <span title="Página inicial">Diccionario ES/EN</span>
+                    <h2 class="dic" title="Página inicial" routerLink="/">Diccionario ES/EN</h2>
                     </a>
-                    <a title="Español" [routerLink]="['espanol']">ESPAÑOL</a>
-                    <a title="Inglés" routerLink="/ingles">ENGLISH</a>
+                    <a class="dic" title="Español" [routerLink]="['espanol']">ESPAÑOL</a>
+                    <a class="dic" title="Inglés" routerLink="/ingles">ENGLISH</a>
                 </div>
                 
                 <div class="cerrar">
                     <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon> person_pin_circle</mat-icon></button>
                     <mat-menu #menu="matMenu">
+                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Cerrar sesión" routerLink="/perfil">Perfil</button>
                         <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Cerrar sesión" (click)="cerrar()">Cerrar sesion</button>
                     </mat-menu>
                 </div>

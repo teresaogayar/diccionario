@@ -54,22 +54,6 @@ export class LoginComponent implements OnInit {
      
     })
 
-    //for(let i in RegisterComponent.users){
-    //  console.log(RegisterComponent.users[i].username)
-    //  usernames.push(RegisterComponent.users[i].username);
-    //  passwords.push(RegisterComponent.users[i].password);
-    //}
-
-    //for(let i in usernames){
-    //  if(usernames[i] == username && passwords[i] == password){
-    //    console.log("Entra")
-    //    this.serviceLogin.Registrar();
-    //    this.logService.inicia();
-    //     this.route.navigate(['/']);
-    //  }else{
-    //     alert("Usuario y/o contraseña incorrecto");
-    //  }
-    //}
   }
     
     
@@ -97,6 +81,6 @@ export class LogService{
   enviaUsername(username: string){
     this.usernameUser.emit(username);
   }
-
+  
 
 }

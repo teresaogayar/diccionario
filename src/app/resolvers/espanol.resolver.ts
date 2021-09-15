@@ -13,7 +13,7 @@ export class EspanolResolver implements Resolve<Observable<any>>{
     
     resolve(route: ActivatedRouteSnapshot){
         return this.espanolService.getPalabras().pipe(
-            delay(3000),
+            delay(1500),
             catchError(e => {
                 alert("Se ha producido un fallado inesperado")
                 console.log(e)

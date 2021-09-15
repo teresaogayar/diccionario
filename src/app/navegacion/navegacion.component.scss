@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
     background-color: #1976d2;
@@ -12,43 +12,40 @@
     font-weight: 600;
   }
 
-  .toolbar img {
-    margin: 4px 10px;
+.logo {
+    height: 50px;
+    width: 50px;
   }
 
   a{
     background-color: rgba(0, 0, 0, 0);
 }
-.menu nav{
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+nav{
     display: flex;
     justify-content: left;
     flex-direction: row;
     align-items: left;
-    margin-top: 10px;
     list-style-type: none;
+    gap:8px;
 }
 .opciones{
   display: flex;
-  justify-content: left;
   flex-direction: row;
-  align-items: left;
-  margin-top: 10px;
-  list-style-type: none;
 }
 .menu nav a{
     display: flex;  
     color:white;
     text-align: left;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 12px;
 }
-.menu nav a img{
-  margin-top: -10px;
-}
-p{
-  margin-top: 80px;
-  margin-left: 20px
+h2{
+  margin-top: 12px;
 }
 .login{
   display: flex;  
@@ -57,13 +54,17 @@ p{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 12px;
-    margin-bottom: 10px;
 }
 .cerrar{
   display: flex;  
     text-align: left;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 12px;
-    margin-bottom: 10px;
+}
+.dic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 8px;
+  height: auto;
 }
