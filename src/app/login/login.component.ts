@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
               private route: Router) {}
   
   registerForm = new FormGroup({
-    email: new FormControl("", Validators.required),
+    username: new FormControl("", Validators.required),
     password: new FormControl('', Validators.required),
   });
 
@@ -29,38 +29,50 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    var emails = [];
-    var passwords = [];
-    var email = this.registerForm.get("email")?.value;
+    //var usernames = [];
+    //var passwords = [];
+    var username = this.registerForm.get("username")?.value;
     var password = this.registerForm.get("password")?.value;
     
-    for(let i in RegisterComponent.users){
-      console.log(RegisterComponent.users[i].email)
-      emails.push(RegisterComponent.users[i].email);
-      passwords.push(RegisterComponent.users[i].password);
-    }
-
-    for(let i in emails){
-      if(emails[i] == email && passwords[i] == password){
-        console.log("Entra")
-        this.serviceLogin.Registrar();
-        this.logService.inicia();
-         this.route.navigate(['/']);
-      }else{
-         alert("Usuario y/o contraseña incorrecto");
+    this.serviceLogin.getUsername(username).subscribe(u => {
+      if(u.length != 0){
+        alert("Existe")
+        if(u[0].username == username){
+          console.log(u[0].password )
+          console.log(password )
+          if(u[0].password == password){
+            console.log("entra")
+            this.serviceLogin.Registrar();
+            this.logService.enviaUsername(username);
+            this.logService.inicia();
+            this.route.navigate(['/']);
+          }else{
+             alert("Usuario y/o contraseña incorrecto");
+          }
+        }
       }
-    }
+     
+    })
+
+    //for(let i in RegisterComponent.users){
+    //  console.log(RegisterComponent.users[i].username)
+    //  usernames.push(RegisterComponent.users[i].username);
+    //  passwords.push(RegisterComponent.users[i].password);
+    //}
+
+    //for(let i in usernames){
+    //  if(usernames[i] == username && passwords[i] == password){
+    //    console.log("Entra")
+    //    this.serviceLogin.Registrar();
+    //    this.logService.inicia();
+    //     this.route.navigate(['/']);
+    //  }else{
+    //     alert("Usuario y/o contraseña incorrecto");
+    //  }
+    //}
   }
     
-    // if(emails.includes(email) && passwords.includes(password)){
-    //   console.log("Entra")
-    //   this.serviceLogin.Registrar();
-    //   this.logService.inicia();
-    //   this.route.navigate(['/inicio']);
-    // }else{
-    //   alert("Usuario y/o contraseña incorrecto");
-    // }
-
+    
   
 
 }
@@ -73,6 +85,7 @@ export class LoginComponent implements OnInit {
 export class LogService{
   registrado = false;
   @Output() muestra: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() usernameUser: EventEmitter<string> = new EventEmitter();
   constructor(){}
 
   inicia(){
@@ -81,6 +94,9 @@ export class LogService{
     this.muestra.emit(this.registrado);
   }
 
+  enviaUsername(username: string){
+    this.usernameUser.emit(username);
+  }
 
 
 }

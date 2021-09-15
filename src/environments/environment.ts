@@ -7,7 +7,8 @@ export const environment = {
   apiUrl: 'http://localhost:8080/espanol/',
   apiUrl2: 'http://localhost:8080/espanol',
   apiUrl1En: 'http://localhost:8080/ingles/',
-  apiUrl2En: 'http://localhost:8080/ingles'
+  apiUrl2En: 'http://localhost:8080/ingles',
+  apiUrlJSON: "http://localhost:3000/usuarios"
 };
 
 /*
