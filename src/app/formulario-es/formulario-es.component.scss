@@ -1,111 +1,109 @@
-p{
-    margin-top: 70px;
-    margin-left: 20px;
-}
 :host {
   display: flex;
   justify-content: center;
-  margin: 100px 0;
-}
-mat-card{
-  background-color: white;
-}
-.mat-form-field{
+  padding: 100px 0;
+  }
+  .all{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:100px;
+  }
+  .card{
+    padding-bottom: 100px;
+  }
+  mat-card{
+  background-color: rgba(255, 255, 255, 0);
+  margin-left: 590px;
+  margin-right: 590px;
+  background-color: #1976d294;
+  }
+  .mat-form-field{
   width: 100%;
   min-width: 300px;
-}
-mat-card-title{
+  }
+  mat-card-title{
+  display: flex;
+  justify-content:center;
+  }
+  mat-card-content{
   display: flex;
   justify-content: center;
-}
-mat-card-content{
-  display: flex;
-  justify-content: center;
-}
-.cab{
-  display: flex;
-  flex-direction: column;
-}
-.boton-menu{
-  display: flex;
-  justify-content: right;
-  flex-direction: row;
-  margin-left: 20px;
-  gap: 15px;
-}
-
-.volver{
+  }
+  .volver{
   background-repeat: no-repeat;
   display: inline-block;
   fill: currentColor;
   border: none;
   background-color:rgba(0, 0, 128, 0);
-  color:rgba(58, 69, 119, 0.705);
+  color:white;
   height: 24px;
   width: 24px;
   margin-right: 10px;
-}
-.palabra{
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-.formulario{
+  }
+  .palabra{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  
+    h3{
+      color: white;
+    }
+  }
+  .formulario{
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
     color: black;
     border-radius: 4px;
-    box-shadow: 0 5px 5px 0 rgb(185, 185, 185);
-    margin-left: 590px;
-    margin-right: 590px;
+    width: 400px;
     margin-top: -50px;
     gap:18px;
-}
-form{
+  }
+  form{
   display: flex;
   flex-direction: column;
-}
-form a{
+  }
+  form a{
   display: flex;
   justify-content: center;
   margin-top: 20px;
   font-size: 10px;
   color: crimson;
-}
-.palabra{
+  }
+  .palabra{
   margin-top:12px;
   margin-bottom:12px;
   color: black;
-}
-.palabra input{
+  }
+  .palabra input{
   background-color: white;
-}
-.description{
+  }
+  .description{
   margin-top:12px;
   margin-bottom:12px;
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 5px 5px 0 rgb(185, 185, 185) 
-}
-.description input{
+  }
+  .description input{
   background-color: white;
-}
-mat-label{
-   color:grey
-}
-
-.errorpal{
+  }
+  mat-label{
+   color:rgb(255, 255, 255)
+  }
+  
+  .errorpal{
   display: flex;
   justify-content: left;
   flex-direction: row;
   color: crimson;
   font-size: 10px;
   margin-left:12px;
-
-}
-.boxboton{
+  
+  }
+  .boxboton{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -113,32 +111,39 @@ mat-label{
   margin-bottom: 8px; 
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0);
-}
-
-.submit{
+  }
+  
+  .submit{
   background-repeat: no-repeat;
   display: inline-block;
   fill: currentColor;
   border: none;
   background-color:rgba(0, 0, 128, 0);
-  color: rgba(18, 158, 18, 0.719);
+  color: white;
   height: 24px;
   width: 24px;
   margin-right: 10px;
-}
-.limpia{
+  }
+  .limpia{
   background-repeat: no-repeat;
   display: inline-block;
   fill: currentColor;
   border: none;
   background-color:rgba(0, 0, 128, 0);
-  color: rgba(236, 205, 27, 0.829);
+  color: white;
   height: 24px;
   width: 24px;
   margin-right: 10px;
-}
-app-pie-pagina{
-  display: flex;
+  }
+  mat-form-field{
+    display: flex;
   justify-content: center;
-  padding-top: 600px;
+  }
+  app-pie-pagina{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color:  rgba(69, 127, 253, 0.226);
 }

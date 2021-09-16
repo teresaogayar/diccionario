@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     
     this.serviceLogin.getUsername(username).subscribe(u => {
       if(u.length != 0){
-        alert("Existe")
+        alert("¡Bienvenido a Diccionario!")
         if(u[0].username == username){
           console.log(u[0].password )
           console.log(password )

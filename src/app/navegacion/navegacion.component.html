@@ -45,7 +45,6 @@
                 <div class="cerrar">
                     <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon> person_pin_circle</mat-icon></button>
                     <mat-menu #menu="matMenu">
-                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Cerrar sesión" routerLink="/perfil">Perfil</button>
                         <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Cerrar sesión" (click)="cerrar()">Cerrar sesion</button>
                     </mat-menu>
                 </div>

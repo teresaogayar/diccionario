@@ -19,19 +19,19 @@ const routes: Routes = [
     path:'ingles', component: InglesComponent, resolve:{ ingles: InglesResolver}, canActivate:[AuthGuard]
   },
   {
-    path:'espanol/formulario/:palabra', component: FormularioEsComponent, canActivate:[AuthGuard]
+    path:'espanol/formulario/:palabra', component: FormularioEsComponent, resolve:{ espanol: EspanolResolver}, canActivate:[AuthGuard]
   },
   {
-    path:'espanol/formulario', component: FormularioEsComponent, canActivate:[AuthGuard]
+    path:'espanol/formulario', component: FormularioEsComponent, resolve:{ espanol: EspanolResolver}, canActivate:[AuthGuard]
   },
   {
     path:'', component: PagInicioComponent
   },
   {
-    path:'ingles/formulario/:word', component: FormularioEnComponent, canActivate:[AuthGuard]
+    path:'ingles/formulario/:word', component: FormularioEnComponent, resolve:{ ingles: InglesResolver}, canActivate:[AuthGuard]
   },
   {
-    path:'ingles/formulario', component: FormularioEnComponent, canActivate:[AuthGuard]
+    path:'ingles/formulario', component: FormularioEnComponent, resolve:{ ingles: InglesResolver},  canActivate:[AuthGuard]
   },
   {
     path:'login', component: LoginComponent

@@ -13,7 +13,7 @@ export class InglesResolver implements Resolve<Observable<any>>{
     
     resolve(route: ActivatedRouteSnapshot){
         return this.inglesService.getWords().pipe(
-            delay(1500),
+            delay(500),
             catchError(e => {
                 alert("Se ha producido un fallado inesperado")
                 console.log(e)

@@ -1,41 +1,43 @@
 <p></p>
-<div class="boton-menu">
-    <div class="act">
-        <div class="acceso">
-            <button class="volver" routerLink="" title="Atrás">
-                <mat-icon>arrow_back</mat-icon>
-            </button>
-       
-            <button mat-button title="Nueva palabra" routerLink="/espanol/formulario">
-                <mat-icon>library_add</mat-icon>
-            </button>
-        </div>
-        <div class="palabra">
-            <h1>Diccionario ES</h1>
-        </div>
-        <div >
-            <mat-label >Búsqueda </mat-label>
-            <input class="caja" (keyup)="filtro($event)" placeholder="Buscar palabra">
-        </div>
-    </div>
-    <div class="dato-fila">
-    <!--Filas  -->
-    <div  *ngIf= "palabraes.length > 0 else nopalabras"> 
-
-        <div class="filas" *ngIf="router.url === '/espanol'" >
-            <div
-                class="flex-item"
-                *ngFor="let espanol of palabraes | search: valor">
-                
-            <app-tarjeta-palabra (enviarBorrado)="MensajeBorrarPalabra($event)" [objetopalabra]="espanol"></app-tarjeta-palabra>
+<div class="all">
+    <div class="boton-menu">
+        <div class="act">
+            <div class="acceso">
+                <button class="volver" routerLink="" title="Atrás">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+        
+                <button mat-button title="Nueva palabra" routerLink="/espanol/formulario">
+                    <mat-icon>library_add</mat-icon>
+                </button>
+            </div>
+            <div class="palabra">
+                <h1>Diccionario ES</h1>
+            </div>
+            <div >
+                <mat-label >Búsqueda </mat-label>
+                <input class="caja" (keyup)="filtro($event)" placeholder="Buscar palabra">
             </div>
         </div>
-    
-    </div> 
+        <div class="dato-fila">
+        <!--Filas  -->
+        <div  *ngIf= "palabraes.length > 0 else nopalabras"> 
 
-    
-    <ng-template #nopalabras>
-        <div class="nopalabras"><b>⚠️ No hay palabras para mostrar</b></div>
-    </ng-template> 
+            <div class="filas" *ngIf="router.url === '/espanol'" >
+                <div
+                    class="flex-item"
+                    *ngFor="let espanol of palabraes | search: valor">
+                    
+                <app-tarjeta-palabra (enviarBorrado)="MensajeBorrarPalabra($event)" [objetopalabra]="espanol"></app-tarjeta-palabra>
+                </div>
+            </div>
+        
+        </div> 
+
+        
+        <ng-template #nopalabras>
+            <div class="nopalabras"><b>⚠️ No hay palabras para mostrar</b></div>
+        </ng-template> 
+    </div>
+    <app-pie-pagina></app-pie-pagina>
 </div>
-<app-pie-pagina></app-pie-pagina>

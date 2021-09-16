@@ -1,40 +1,42 @@
 <p></p>
-<div class="boton-menu">
-    <div class="act">
-        <div class="acceso">
-            <button class="volver" routerLink="" title="Atrás">
-                <mat-icon>arrow_back</mat-icon>
-            </button>
-       
-            <button mat-button title="New word" routerLink="/ingles/formulario">
-                <mat-icon>library_add</mat-icon>
-            </button>
-        </div>
-        <div class="palabra">
-            <h1>Dictionary EN</h1>
-        </div>
-        <div class="col-lg-2">
-            <mat-label >Search </mat-label>
-            <input class="caja" (keyup)="filtroWord($event)" placeholder="Search word">
-        </div>
-    </div>
-    <div class="dato-fila">
-        <!--Filas  -->
-        <div  *ngIf= "palabraen.length > 0 else nowords"> 
-    
-            <div class="filas" *ngIf="router.url === '/ingles'" >
-                <div
-                    class="flex-item"
-                    *ngFor="let ingles of palabraen | search: valor">
-                    
-                <app-tarjeta-word (sendBorrado)="MensajeBorrarWord($event)" [objetoword]="ingles"></app-tarjeta-word>
-                </div>
-            </div>
+<div class="all">
+    <div class="boton-menu">
+        <div class="act">
+            <div class="acceso">
+                <button class="volver" routerLink="" title="Atrás">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
         
-        </div> 
-    
-    <ng-template #nowords>
-        <div class="nowords"><b>⚠️ There are no words to show</b></div>
-    </ng-template> 
+                <button mat-button title="New word" routerLink="/ingles/formulario">
+                    <mat-icon>library_add</mat-icon>
+                </button>
+            </div>
+            <div class="palabra">
+                <h1>Dictionary EN</h1>
+            </div>
+            <div class="col-lg-2">
+                <mat-label >Search </mat-label>
+                <input class="caja" (keyup)="filtroWord($event)" placeholder="Search word">
+            </div>
+        </div>
+        <div class="dato-fila">
+            <!--Filas  -->
+            <div  *ngIf= "palabraen.length > 0 else nowords"> 
+        
+                <div class="filas" *ngIf="router.url === '/ingles'" >
+                    <div
+                        class="flex-item"
+                        *ngFor="let ingles of palabraen | search: valor">
+                        
+                    <app-tarjeta-word (sendBorrado)="MensajeBorrarWord($event)" [objetoword]="ingles"></app-tarjeta-word>
+                    </div>
+                </div>
+            
+            </div> 
+        
+        <ng-template #nowords>
+            <div class="nowords"><b>⚠️ There are no words to show</b></div>
+        </ng-template> 
+    </div>
+    <app-pie-pagina></app-pie-pagina>
 </div>
-<app-pie-pagina></app-pie-pagina>

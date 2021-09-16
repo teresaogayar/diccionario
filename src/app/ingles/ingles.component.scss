@@ -2,13 +2,20 @@ p{
   margin-top: 70px;
   margin-left: 20px;
 }
+.all{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:100px;
+}
 .act{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  background-color: rgba(69, 127, 253, 0.226);
+  background-color: #1976d2;
+  border-top: 1px solid rgba(255, 255, 255, 0.342);
   width: 100%;
   gap: 10px;
 }
@@ -19,6 +26,9 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.palabra{
+  margin-top: 5px;
 }
 .boton-menu{
   display: flex;
@@ -76,5 +86,7 @@ p{
 app-pie-pagina{
   display: flex;
   justify-content: center;
-  padding-top: 600px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color:  rgba(69, 127, 253, 0.226);
 }
