@@ -2,15 +2,16 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     gap:100px;
 }
 .container{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 90px;
-    margin-left: 230px;
-    margin-right: 230px;
+    margin: 90px 30px;
+    min-width: 500px;
+    max-width: 80%;
     box-shadow: 5px 0 5px 5px rgba(185, 185, 185, 0.452);
     background-color:rgba(255, 255, 255, 0.644);
 }

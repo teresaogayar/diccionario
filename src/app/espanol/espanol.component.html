@@ -21,20 +21,20 @@
         </div>
         <div class="dato-fila">
         <!--Filas  -->
-        <div  *ngIf= "palabraes.length > 0 else nopalabras"> 
+            <div  *ngIf= "palabraes.length > 0 else nopalabras"> 
 
-            <div class="filas" *ngIf="router.url === '/espanol'" >
-                <div
-                    class="flex-item"
-                    *ngFor="let espanol of palabraes | search: valor">
-                    
-                <app-tarjeta-palabra (enviarBorrado)="MensajeBorrarPalabra($event)" [objetopalabra]="espanol"></app-tarjeta-palabra>
+                <div class="filas" *ngIf="router.url === '/espanol'" >
+                    <div
+                        class="flex-item"
+                        *ngFor="let espanol of palabraes | search: valor">
+                        
+                    <app-tarjeta-palabra (enviarBorrado)="MensajeBorrarPalabra($event)" [objetopalabra]="espanol"></app-tarjeta-palabra>
+                    </div>
                 </div>
-            </div>
-        
-        </div> 
+            
+            </div> 
 
-        
+        </div>
         <ng-template #nopalabras>
             <div class="nopalabras"><b>⚠️ No hay palabras para mostrar</b></div>
         </ng-template> 

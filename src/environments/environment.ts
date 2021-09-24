@@ -8,7 +8,9 @@ export const environment = {
   apiUrl2: 'http://localhost:8080/espanol',
   apiUrl1En: 'http://localhost:8080/ingles/',
   apiUrl2En: 'http://localhost:8080/ingles',
-  apiUrlJSON: "http://localhost:3000/usuarios"
+  apiUrlJSON: "http://localhost:3000/usuarios",
+  
+  client_Id: '838004973234-dmv6qm8chb7en79r3tss0ri5lolj6ntb.apps.googleusercontent.com'
 };
 
 /*

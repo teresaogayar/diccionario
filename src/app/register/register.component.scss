@@ -1,7 +1,7 @@
 :host {
     display: flex;
     justify-content: center;
-    margin: 100px 0;
+    margin: 70px 0;
 }
 .all{
     padding-bottom: 210px;
@@ -11,18 +11,46 @@
 }
 mat-card{
     background-color:  #176bbeda;
+    margin-top: 30px;
 }
-.mat-form-field{
+mat-form-field{
+    color: white;
     width: 100%;
     min-width: 300px;
 }
 mat-card-title{
     font-size: 18px;
 }
-mat-card-title, mat-card-content{
+mat-card-title, mat-card-content, mat-card-footer{
     display: flex;
     justify-content: center;
 }
 button{
     width: 100%;
 }
+mat-card-footer{
+    margin-bottom: 8px;
+    height: 30px;
+    width: 350px;
+}
+button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.582);
+    font-size: 13px;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+  button:hover {
+    background-color: #b2bdb8d8;
+    color: white;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: rgb(170, 170, 170);
+    cursor: auto;
+  }

@@ -1,5 +1,5 @@
 <!-- Toolbar -->
-<ng-container  *ngIf= "registrado == false; else login">
+<ng-container  *ngIf= "esta == false; else login">
     <div class="toolbar" role="banner"> 
         <div class="menu">
             <nav>
@@ -14,10 +14,16 @@
                 </div>
                 
                 <div class="login">
-                    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon>account_circle</mat-icon></button>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Inicar sesión" routerLink="/login">Iniciar sesión</button>
-                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Registrar" routerLink="/register">Registrar</button>
+                    <button title="Menú usuario" mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon>account_circle</mat-icon></button>
+                    <mat-menu class="customize" #menu="matMenu">
+                        <button mat-menu-item style="cursor: pointer; color: white; display: flex; justify-content: center;" title="Inicar sesión" routerLink="/login">
+                           <a><mat-icon >login</mat-icon></a>
+                           <a>Iniciar sesión</a>
+                        </button>
+                        <button mat-menu-item style="cursor: pointer; color: white; display: flex; justify-content: center;" title="Registrar" routerLink="/register">
+                            <a><mat-icon>person_add</mat-icon></a>
+                           <a>Registrar</a>
+                        </button>
                     </mat-menu>
                 </div>
             </nav>
@@ -43,9 +49,13 @@
                 </div>
                 
                 <div class="cerrar">
-                    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon> person_pin_circle</mat-icon></button>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item style="cursor: pointer; color: cornflowerblue; display: flex; justify-content: center;" title="Cerrar sesión" (click)="cerrar()">Cerrar sesion</button>
+                    <button title="Menú usuario" mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon>how_to_reg</mat-icon></button>
+                    <mat-menu class="customize" #menu="matMenu">
+                        <button mat-menu-item style="cursor: pointer; color: white; display: flex; justify-content: center;"
+                         title="Cerrar sesión" (click)="cerrar()">
+                         <a><mat-icon>clear</mat-icon></a>
+                         <a>Cerrar sesión</a>
+                        </button>
                     </mat-menu>
                 </div>
             </nav>
